@@ -30,7 +30,7 @@ def validate_xml(file_path):
         return str(e)
 
 def check_folder_for_invalid_files(folder_path, log_file):
-    for root, files in os.walk(folder_path):
+    for root, _, files in os.walk(folder_path):
         for file in files:
             file_path = os.path.join(root, file)
             error_message = None
